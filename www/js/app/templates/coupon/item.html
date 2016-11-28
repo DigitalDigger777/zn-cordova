@@ -1,0 +1,35 @@
+<div class="zan-container-content">
+    <div class="zan-content-header">
+        <h2>
+            <img class="preload-image" data-original="images/zan-images/u150.png" alt="img" width="40">
+            Shop name
+        </h2>
+        <h1><%=couponTemplate.title %></h1>
+    </div>
+    <div class="zan-content">
+        <img class="preload-image" data-original="images/zan-images/friends-coupon.png" alt="img" height="50" style="margin:0 auto">
+        <div class="zan-container">
+            <h2><%=finePrint %></h2>
+            <b>Days left: 15</b><br>
+            <%
+                var createdDate = new Date(createdDate.date);
+                var expirationDate = new Date(expirationDate.date);
+            %>
+            <em><%=createdDate.toLocaleDateString() %>-<%=expirationDate.toLocaleDateString() %></em>
+        </div>
+        <div class="center-text">
+            <!--<div class="zan-qr-code">-->
+                <!--<img class="preload-image" data-original="images/zan-images/qr-code.png" alt="img" width="100">-->
+            <!--</div>-->
+            <div class="zan-coupon-number">#<%=id %></div>
+        </div>
+        <div class="zan-content-footer">
+            <a href="#" class="read-more-link full-bottom"><i class="fa fa-info-circle"></i></a>
+            <a href="#" class="share-page-link show-share-bottom"><i class="fa fa-cloud-upload"></i></a>
+            <div style="text-align:center; margin-top:-30px">
+                Powered by <a href="#" style="display: inline-block;">zanrewards.com</a>
+            </div>
+        </div>
+    </div>
+
+</div>
