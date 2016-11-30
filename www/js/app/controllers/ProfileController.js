@@ -4,11 +4,11 @@
 
 define([
     'view/user/ProfileView',
-    'view/user/LoginView'
-], function(ProfileView, LoginView){
+    'view/user/LoginView',
+    'view/user/LoginHelpView'
+], function(ProfileView, LoginView, LoginHelpView){
     return {
         showProfile: function(){
-            //TODO: release show profile
             console.log('show profile');
             var profileView = new ProfileView();
             profileView.render();
@@ -19,7 +19,9 @@ define([
             loginView.render();
         },
         loginHelp: function(){
-
+            console.log('show login help form');
+            var loginHelpView = new LoginHelpView();
+            loginHelpView.render();
         }
     }
 });
