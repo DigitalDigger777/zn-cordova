@@ -1,19 +1,20 @@
 /**
- * Created by korman on 22.11.16.
+ * Created by korman on 28.11.16.
  */
 
 define([
     'marionette',
-    'text!template/coupon/item.html',
+    'text!template/coupon/detail.html',
     'vendor/jquery_lazyload/jquery.lazyload'
 ], function(Marionette, template){
-    //console.log(Marionette);
+
     return Marionette.View.extend({
-        el: '#content',
+        el:'#content',
         template: function(model){
             return _.template(template)(model);
         },
         onRender: function(){
+            console.log('Render coupon detail');
             $(".preload-image").lazyload({
                 threshold : 100,
                 effect : "fadeIn",

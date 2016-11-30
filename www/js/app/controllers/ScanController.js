@@ -2,7 +2,7 @@
  * Created by korman on 23.11.16.
  */
 
-define(['model/CouponModel', 'view/CouponView'], function(CouponModel, CouponView){
+define(['model/CouponModel', 'view/coupon/CouponDetailView'], function(CouponModel, CouponDetailView){
     return {
         scan: function(){
             //TODO: release scan
@@ -41,7 +41,7 @@ define(['model/CouponModel', 'view/CouponView'], function(CouponModel, CouponVie
 
                                     console.log(model.toJSON());
 
-                                    var couponView = new CouponView({
+                                    var couponView = new CouponDetailView({
                                         model: model
                                     });
                                     couponView.render();
