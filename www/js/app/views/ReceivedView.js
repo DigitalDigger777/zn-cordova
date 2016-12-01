@@ -7,8 +7,8 @@ define(['marionette', 'text!template/received/item.html'], function(Marionette, 
     return Marionette.View.extend({
         tagName: 'div',
         className: 'zan-card zan-container-content',
-        template: function(){
-            return _.template(template)({});
+        template: function(model){
+            return _.template(template)(model);
         },
         onRender: function(){
             console.log('Render received list item');
