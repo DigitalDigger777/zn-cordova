@@ -4,10 +4,9 @@
 
 define(['backbone'], function(Backbone){
     var urlRoot = requirejs.s.contexts._.config.urlRoot;
-    var token = window.localStorage.getItem('token');
 
     var StoreModel = Backbone.Model.extend({
-        urlRoot: urlRoot + 'en/pass/rest/coupon?apikey=' + token
+        urlRoot: urlRoot + 'en/pass/rest/coupon'
     });
 
     return StoreModel;
