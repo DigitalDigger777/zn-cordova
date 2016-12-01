@@ -4,15 +4,20 @@
 
 define([
     'marionette',
-    'text!template/user/profile.html'
+    'text!template/user/profile.html',
+    'vendor/jquery_lazyload/jquery.lazyload'
 ], function(Marionette, template){
     return Marionette.View.extend({
-        el: '#content',
+        el: '#page-content-scroll',
         template: function(model){
             return _.template(template)(model);
         },
         onRender: function(){
-            console.log('Render Profile');
+            $(".preload-image").lazyload({
+                threshold : 100,
+                effect : "fadeIn",
+                container: $("#page-content-scroll")
+            });
         }
     });
 });

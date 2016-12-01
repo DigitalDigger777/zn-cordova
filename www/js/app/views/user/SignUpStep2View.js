@@ -8,7 +8,7 @@ define([
     'text!template/user/sign_up_step_2.html'
 ], function(Marionette, Backbone, template){
     return Marionette.View.extend({
-        el: '#content',
+        el: '#page-content-scroll',
         template: function(model){
             return _.template(template)(model);
         },

@@ -9,7 +9,7 @@ define([
 ], function(Marionette, template, CouponItemView){
 
     return Marionette.CompositeView.extend({
-        el: '#content',
+        el: '#page-content-scroll',
         childView: CouponItemView,
         childViewContainer: '#couponList',
         template: function(){

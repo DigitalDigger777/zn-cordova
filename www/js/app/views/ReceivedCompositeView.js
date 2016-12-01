@@ -11,7 +11,7 @@ define([
     console.log(template);
     console.log(ReceivedView);
     return Marionette.CompositeView.extend({
-        el: '#content',
+        el: '#page-content-scroll',
         childView: ReceivedView,
         childViewContainer: '#receivedListView',
         template: function(){

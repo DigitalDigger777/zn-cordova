@@ -8,7 +8,7 @@ define([
     'text!template/user/login_help.html'
 ], function(Marionette, Backbone, template){
     return Marionette.View.extend({
-        el: '#content',
+        el: '#page-content-scroll',
         ui: {
             loginButton: '.login-button'
         },

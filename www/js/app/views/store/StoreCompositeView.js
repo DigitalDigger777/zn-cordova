@@ -9,7 +9,7 @@ define([
 ], function(Marionette, template, StoreItemView){
 
     return Marionette.CompositeView.extend({
-        el: '#content',
+        el: '#page-content-scroll',
         childView: StoreItemView,
         childViewContainer: '#storeList',
         template: function(){

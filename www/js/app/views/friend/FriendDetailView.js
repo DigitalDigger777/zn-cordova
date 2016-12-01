@@ -8,7 +8,7 @@ define([
 ], function(Marionette, template){
 
     return Marionette.View.extend({
-        el:'#content',
+        el:'#page-content-scroll',
         template: function(){
             return _.template(template)({});
         },

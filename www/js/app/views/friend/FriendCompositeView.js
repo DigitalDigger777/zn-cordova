@@ -9,7 +9,7 @@ define([
 ], function(Marionette, template, FriendItemView){
 
     return Marionette.CompositeView.extend({
-        el: '#content',
+        el: '#page-content-scroll',
         childView: FriendItemView,
         childViewContainer: '#friendList',
         template: function(){
