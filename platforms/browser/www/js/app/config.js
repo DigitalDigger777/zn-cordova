@@ -39,8 +39,8 @@ require.config({
 });
 
 require(['./js/app/main'], function(ZanApp){
-    var app = new ZanApp();
-    app.start();
+    app.zan = new ZanApp();
+    app.zan.start();
 });
 //require([
 //

@@ -16,6 +16,5 @@ define(['backbone', 'model/MessageModel'], function(Backbone, MessageModel){
             options.dataType = "jsonp";
             return Backbone.sync(method, collection, options);
         }
-
     });
 });

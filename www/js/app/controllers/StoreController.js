@@ -9,7 +9,7 @@ define([
     return {
         showList: function(page){
             console.log('store list');
-            console.log(StoreCollection);
+
             var storeList = new StoreCollection();
 
             storeList.fetch({

@@ -11,7 +11,6 @@ define([
     return Marionette.View.extend({
         el: '#content',
         template: function(model){
-            console.log('vm', model);
             return _.template(template)(model);
         },
         onRender: function(){

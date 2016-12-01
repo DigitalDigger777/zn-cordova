@@ -7,7 +7,9 @@ define(['marionette', 'controller/ProfileController'], function(Marionette, Prof
     var ProfileRouter = Marionette.AppRouter.extend({
         controller: ProfileController,
         appRoutes: {
-            'profile':'showProfile'
+            'profile':'showProfile',
+            'login': 'login',
+            'login-help': 'loginHelp'
         }
     });
 
