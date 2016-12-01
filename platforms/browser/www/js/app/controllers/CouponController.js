@@ -4,8 +4,10 @@
 
 define([
     'collection/CouponCollection',
-    'view/coupon/CouponCompositeView'
-], function(CouponCollection, CouponCopositeView){
+    'view/coupon/CouponCompositeView',
+    'view/coupon/CouponDetailView',
+    'model/CouponModel'
+], function(CouponCollection, CouponCompositeView, CouponDetailView, CouponModel){
     return {
         showList: function(page){
 
@@ -16,19 +18,43 @@ define([
             couponList.fetch({
                 success: function(collection, response){
                     console.log(collection.toJSON());
+
+                    var couponListView = new CouponCompositeView({
+                        collection: collection
+                    });
+                    couponListView.render();
                 },
                 error: function(collection, response){
                     console.log('Error');
                 }
             });
-            var couponListView = new CouponCopositeView({
-                collection: couponList
-            });
-            couponListView.render();
+
         },
         showItem: function(id){
-            //TODO: release show item list
-            console.log('coupon item');
+            console.log('coupon item ', id);
+
+            var token = window.localStorage.getItem('token');
+
+            var model = new CouponModel();
+            model.set('id', id);
+            model.fetch({
+                data: {
+                    apikey: token
+                },
+                dataType:'jsonp',
+                success: function(model, response){
+
+                    console.log(model.toJSON());
+
+                    var couponView = new CouponDetailView({
+                        model: model
+                    });
+                    couponView.render();
+                },
+                error: function(model, response){
+                    console.log('error', model, response);
+                }
+            });
         }
     }
 });

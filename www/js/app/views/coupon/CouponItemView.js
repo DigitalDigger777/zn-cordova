@@ -10,8 +10,8 @@ define([
     return Marionette.View.extend({
         tagName: 'div',
         className: 'zan-card zan-container-content',
-        template: function(){
-            return _.template(template)({});
+        template: function(model){
+            return _.template(template)(model);
         },
         onRender: function(){
             console.log('Render coupon item');
