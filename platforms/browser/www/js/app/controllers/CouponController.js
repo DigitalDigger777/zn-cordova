@@ -6,8 +6,10 @@ define([
     'collection/CouponCollection',
     'view/coupon/CouponCompositeView',
     'view/coupon/CouponDetailView',
-    'model/CouponModel'
-], function(CouponCollection, CouponCompositeView, CouponDetailView, CouponModel){
+    'model/CouponModel',
+    'view/coupon/CouponAlertSettingView',
+    'view/coupon/CouponAlertChooseView'
+], function(CouponCollection, CouponCompositeView, CouponDetailView, CouponModel, CouponAlertSettingView, CouponAlertChooseView){
     return {
         showList: function(page){
 
@@ -55,6 +57,14 @@ define([
                     console.log('error', model, response);
                 }
             });
+        },
+        alertSetting: function(id){
+            var alertSettingView = new CouponAlertSettingView();
+            alertSettingView.render();
+        },
+        alertChoose: function(id){
+            var alertChoose = new CouponAlertChooseView();
+            alertChoose.render();
         }
     }
 });

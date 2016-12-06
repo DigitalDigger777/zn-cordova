@@ -15,15 +15,16 @@ define([
             receivedList.fetch({
                 success: function(collection, response){
                     console.log(collection.toJSON());
+                    var receivedListView = new ReceivedCompositeView({
+                        collection: receivedList
+                    });
+                    receivedListView.render();
                 },
                 error: function(collection, response){
                     console.log('Error');
                 }
             });
-            var receivedListView = new ReceivedCompositeView({
-                collection: receivedList
-            });
-            receivedListView.render();
+
         },
         showItem: function(id) {
             //TODO: show item

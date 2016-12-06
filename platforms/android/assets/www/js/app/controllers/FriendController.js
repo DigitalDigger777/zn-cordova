@@ -2,15 +2,35 @@
  * Created by korman on 23.11.16.
  */
 
-define([], function(){
+define([
+    'collection/FriendCollection',
+    'view/friend/FriendCompositeView',
+    'view/friend/FriendSendView'
+], function(FriendCollection, FriendCompositeView, FriendSendView){
     return {
         showList: function(page){
-            //TODO: show list of friend's
             console.log('friend list');
+            var friendList = new FriendCollection();
+
+            friendList.fetch({
+                success: function(collection, response){
+                    console.log(collection.toJSON());
+                    var friendListView = new FriendCompositeView({
+                        collection: friendList
+                    });
+                    friendListView.render();
+                },
+                error: function(collection, response){
+                    console.log('Error');
+                }
+            });
         },
-        showItem: function(id){
-            //TODO: show friend
-            console.log('friend item');
+        send: function(id){
+
+            console.log('send coupon');
+
+            var friendSendView = new FriendSendView();
+            friendSendView.render();
         }
     }
 });

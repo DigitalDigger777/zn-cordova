@@ -72,20 +72,21 @@
     top:0px;
     left:0px;
     right:0px;
-    height:60px;
+    height:40px;
     z-index:9999;
     transition:all 500ms ease;
     border-right:solid 1px rgba(255,255,255,0.05);
     border-left:solid 1px rgba(255,255,255,0.05);
     border-bottom:solid 1px rgba(255,255,255,0.08);
+    background: url("../images/zan-images/header-bg.png") repeat-x;
 }
 
 .header-icon-1{
     position:absolute;
     left:0px;
     width:60px;
-    height:60px;
-    line-height:60px;
+    height:40px;
+    line-height:40px;
     text-align:center;
 }
 
@@ -113,19 +114,25 @@
     top:0px;
     right:0px;
     width:60px;
-    height:60px;
-    line-height:60px;
+    height:40px;
+    line-height:40px;
     text-align:center;
+}
+
+.zan-login-header .header-logo {
+    height: 40px !important;
+    width: 44px !important;
+    margin-top:17px !important;
 }
 
 .header-light .header-logo{
     background-image:url(../images/header-logo.png);
-    height:36px;
-    width:39px;
-    background-size:39px 36px;
+    height:24px;
+    width:27px;
+    background-size: cover;
     margin-left:auto;
     margin-right:auto;
-    margin-top:10px;
+    margin-top:8px;
 }
 
 .header-dark .header-logo{
@@ -2485,6 +2492,15 @@ html, body {
     background-color: #fFFFFF;
 }
 
+.header-light a {
+    color: #FFFFFF !important;
+}
+
 .header-light .header-icon-1 {
     border-right:none;
+}
+
+.zan-login-header {
+    height: 80px;
+    margin-bottom: 40px!important;
 }

@@ -3,7 +3,7 @@
  */
 
 require.config({
-    urlRoot: 'http://dev.xu/app_dev.php/',
+    urlRoot: 'http://xu.joinppcg.com/',
     baseUrl: './',
     paths: {
         vendor: "./vendor",
@@ -20,7 +20,14 @@ require.config({
         backbone: "./vendor/backbone/backbone-min",
         "backbone.radio": "./vendor/backbone.radio/build/backbone.radio.min",
         marionette: "./vendor/backbone.marionette/lib/backbone.marionette.min",
-        text: "./vendor/text/text"
+        text: "./vendor/text/text",
+        "backbone-local-storage": './vendor/backbone-localstorage/backbone-localstorage',
+
+        drum: "./scripts/ios_7_drums/lib/drum.min",
+
+        hammerjs: "./vendor/hammerjs/hammer.min",
+        "jquery-hammer": "./vendor/jquery-hammerjs/jquery.hammer",
+        "hammer-fakemultitouch": "./vendor/hammerjs/plugins/hammer.fakemultitouch"
     },
     shim: {
         underscore: {
@@ -33,6 +40,14 @@ require.config({
         marionette: {
             deps: ["backbone", "backbone.radio"],
             exports: 'marionette'
+        },
+        "backbone-local-storage": {
+            deps: ["backbone"],
+            exports: "Backbone.localStorage"
+        },
+        drum: {
+            deps: ["jquery"],
+            exports: 'Drum'
         }
     },
     waitSeconds: 10

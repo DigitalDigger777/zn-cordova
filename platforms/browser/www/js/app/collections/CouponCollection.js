@@ -3,7 +3,7 @@
  */
 
 define(['backbone', 'model/CouponModel'], function(Backbone, CouponModel){
-    //console.log(requirejs.s.contexts._.config.urlRoot );
+
     var urlRoot = requirejs.s.contexts._.config.urlRoot;
 
     return Backbone.Collection.extend({
@@ -12,10 +12,9 @@ define(['backbone', 'model/CouponModel'], function(Backbone, CouponModel){
         },
         model: CouponModel,
         sync: function(method, collection, options){
-            console.log(options);
+            console.log(Backbone.LocalStorage);
             options.dataType = "jsonp";
             return Backbone.sync(method, collection, options);
         }
-
     });
 });

@@ -6,6 +6,7 @@ define([
     'backbone',
     'view/ReceivedCompositeView',
     'collection/ReceivedCollection',
+    'view/HeaderView',
     'router/CouponRouter',
     'router/FriendRouter',
     'router/MessageRouter',
@@ -14,7 +15,7 @@ define([
     'router/ScanRouter',
     'router/StoreRouter',
     'router/SignUpRouter'
-], function(Backbone, ReceivedCompositeView, ReceivedCollection){
+], function(Backbone, ReceivedCompositeView, ReceivedCollection, HeaderView){
 
 
     var zan = Backbone.Marionette.Application.extend({
@@ -32,17 +33,19 @@ define([
                 receivedList.fetch({
                     success: function(collection, response){
                         console.log(collection.toJSON());
+                        var receivedListView = new ReceivedCompositeView({
+                            collection: receivedList
+                        });
+
+                        receivedListView.render();
                     },
                     error: function(collection, response){
                         console.log('Error');
                     }
                 });
 
-                var receivedListView = new ReceivedCompositeView({
-                    collection: receivedList
-                });
-
-                receivedListView.render();
+                var header = new HeaderView();
+                header.render();
             } else {
                 //Backbone.history.navigate('#login', true);
                 window.location.hash = '#login'

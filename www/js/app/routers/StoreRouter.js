@@ -8,7 +8,9 @@ define(['marionette', 'controller/StoreController'], function(Marionette, StoreC
         controller: StoreController,
         appRoutes: {
             'store-list/:page':'showList',
-            'store-item/:id': 'showItem'
+            'store-item/:id': 'showItem',
+            'store-all-coupons/:id': 'allCoupons',
+            'store-your-coupons/:id': 'youCoupons'
         }
     });
 

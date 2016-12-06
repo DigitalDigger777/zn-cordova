@@ -8,7 +8,7 @@ define(['marionette', 'controller/FriendController'], function(Marionette, Frien
         controller: FriendController,
         appRoutes: {
             'friend-list/:page':'showList',
-            'friend-item/:id': 'showItem'
+            'send/:id': 'send'
         }
     });
 

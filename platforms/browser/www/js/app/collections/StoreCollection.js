@@ -8,7 +8,7 @@ define(['backbone', 'model/StoreModel'], function(Backbone, StoreModel){
 
     return Backbone.Collection.extend({
         url: function(){
-            return urlRoot + 'en/pass/api/user-coupon/list?apikey=' + window.localStorage.getItem('token')
+            return urlRoot + 'en/shoppers/rest/list?apikey=' + window.localStorage.getItem('token')
         },
         model: StoreModel,
         sync: function(method, collection, options){

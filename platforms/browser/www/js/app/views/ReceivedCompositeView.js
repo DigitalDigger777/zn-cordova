@@ -5,13 +5,14 @@
 define([
     'marionette',
     'text!template/received/list.html',
-    'view/ReceivedView'
+    'view/ReceivedView',
+    'vendor/jquery_lazyload/jquery.lazyload'
 ], function(Marionette, template, ReceivedView){
     //console.log(Marionette);
     console.log(template);
     console.log(ReceivedView);
     return Marionette.CompositeView.extend({
-        el: '#content',
+        el: '#page-content-scroll',
         childView: ReceivedView,
         childViewContainer: '#receivedListView',
         template: function(){
@@ -19,6 +20,11 @@ define([
         },
         onRender: function(){
             console.log('Render received list');
+            $(".preload-image").lazyload({
+                threshold : 100,
+                effect : "fadeIn",
+                container: $("#page-content-scroll")
+            });
         }
     });
 });

@@ -8,7 +8,9 @@ define(['marionette', 'controller/CouponController'], function(Marionette, Coupo
         controller: CouponController,
         appRoutes: {
             'coupon-list/:page':'showList',
-            'coupon-item/:id': 'showItem'
+            'coupon-item/:id': 'showItem',
+            'alert-setting/:id': 'alertSetting',
+            'alert-choose/:id': 'alertChoose'
         }
     });
 

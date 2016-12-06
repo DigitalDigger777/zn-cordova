@@ -2,7 +2,10 @@
  * Created by korman on 22.11.16.
  */
 
-define(['marionette', 'text!template/received/item.html'], function(Marionette, template){
+define([
+    'marionette',
+    'text!template/received/item.html'
+], function(Marionette, template){
     //console.log(Marionette);
     return Marionette.View.extend({
         tagName: 'div',

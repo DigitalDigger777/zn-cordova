@@ -2,7 +2,7 @@
  * Created by korman on 23.11.16.
  */
 
-define(['model/CouponModel', 'view/CouponView'], function(CouponModel, CouponView){
+define(['model/CouponModel', 'view/coupon/ScanCouponView'], function(CouponModel, ScanCouponView){
     return {
         scan: function(){
             //TODO: release scan
@@ -38,13 +38,12 @@ define(['model/CouponModel', 'view/CouponView'], function(CouponModel, CouponVie
                                 success: function(model, response){
                                     //console.log('success', model, response);
                                     //console.log(model.get('barcodeContent'));
-
                                     console.log(model.toJSON());
 
-                                    var couponView = new CouponView({
+                                    var scanCouponView = new ScanCouponView({
                                         model: model
                                     });
-                                    couponView.render();
+                                    scanCouponView.render();
                                 },
                                 error: function(model, response){
                                     console.log('error', model, response);

@@ -4041,7 +4041,7 @@ calendar*{
     padding-top:0px;
     padding-bottom:0px;
     height:45px;
-    line-height:45px;
+    /*line-height:45px;*/
     width:100%;
     display:block;
     background-color:rgba(255,255,255,1);
@@ -4071,7 +4071,7 @@ calendar*{
 .page-login .login-date input:focus, 
 .page-login .login-input input:focus{
     color:#1f1f1f;
-    border-bottom:solid 2px #27ae60;
+    border-bottom:solid 2px #74bcf7;
     transition:all 250ms ease;
 }
 
@@ -10226,8 +10226,7 @@ dialog {
     font-size:12px;
     color:#666666;
     margin-bottom:30px;
-    background-color: gray;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
     padding: 3px;
 }
 
@@ -10275,7 +10274,6 @@ dialog {
 }
 
 #zan-personal-data > div:last-child {
-    border-bottom: none;
     margin-bottom: 0;
 }
 
@@ -10287,6 +10285,10 @@ dialog {
     color: #666666;
 }
 
+#zan-personal-data > div {
+    position: relative;
+}
+
 #zan-personal-data label {
     display: inline-block;
     margin-left: 0;
@@ -10294,10 +10296,18 @@ dialog {
 
 #zan-personal-data input {
     background: none;
-    padding-top: 6px;
-    padding-bottom: 6px;
     /*width: 100%;*/
-    max-width: 180px;
+    max-width: 130px;
+    position: absolute;
+    right: 15px;
+    top: 1px;
+    text-align: right;
+}
+
+#zan-personal-data select {
+    position: absolute;
+    right: 15px;
+    top: 0;
 }
 
 #zan-gender-list {
@@ -10307,6 +10317,25 @@ dialog {
 
 #zan-personal-data li {
     list-style: none;
+}
+
+#zan-personal-data p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+#zan-personal-data p > a {
+    color: inherit;
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+#zan-personal-data .fa-chevron-right {
+    position: absolute;
+    right:0;
+    line-height:24px;
+
 }
 
 #zan-gender,
@@ -10452,6 +10481,11 @@ dialog {
     text-align: center;
 }
 
+::-webkit-input-placeholder {color:#666666;}
+::-moz-placeholder          {color:#666666;}
+:-moz-placeholder           {color:#666666;}
+:-ms-input-placeholder      {color:#666666;}
+
 .zan-list-radio li {
     list-style-type: none;
     margin: 7px 0 30px;
@@ -10521,6 +10555,15 @@ dialog {
     padding-top: 100px !important;
 }
 
+.zan-login-content .login-button {
+    margin-bottom: 5px;
+}
+
+.zan-question a {
+    color: #74bcf7;
+    text-decoration: underline;
+}
+
 .zan-coupon-send {
     padding-top: 30px;
 }
@@ -10562,4 +10605,67 @@ dialog {
 
 #page-sign-up {
     margin-top: 90px;
+}
+
+.mdl-dialog div {
+    display: inherit;
+}
+#zan-change-password {
+    margin-top: 50px;
+}
+
+#zan-change-password .decoration {
+    margin-bottom: 0;
+}
+#zan-change-password label {
+    margin-left: 20px;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#zan-change-password input{
+    background: none;
+    width: 100%;
+    padding-left: 30px;
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#zan-change-password > div {
+    margin-bottom: 60px;
+}
+
+
+#zan-change-password ::-webkit-input-placeholder {color:#999999;}
+#zan-change-password ::-moz-placeholder          {color:#999999;}
+#zan-change-password :-moz-placeholder           {color:#999999;}
+#zan-change-password :-ms-input-placeholder      {color:#999999;}
+
+.zan-sign-up-step-2 {
+    margin-top: 50px;
+}
+
+.zan-sign-up-step-2 .button-fullscreen {
+    margin-bottom: 8px;
+}
+
+#zan-gender {
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.zan-selected-time {
+    padding: 15px 15px 0;
+}
+
+.zan-selected-time p {
+    margin-bottom: 0;
+}
+
+.zan-selected-time p .fa {
+    margin-right: 15px;
 }

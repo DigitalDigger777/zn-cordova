@@ -6,8 +6,15 @@ define([
     'collection/StoreCollection',
     'view/store/StoreCompositeView',
     'model/StoreModel',
-    'view/store/StoreDetailView'
-], function(StoreCollection, StoreCompositeView, StoreModel, StoreDetailView){
+    'view/store/StoreDetailView',
+    'view/store/all_coupons/StoreAllCouponCompositeView',
+    'view/store/your_coupons/StoreYourCouponCompositeView',
+    'collection/StoreAllCouponCollection',
+    'collection/StoreYourCouponCollection'
+], function(StoreCollection, StoreCompositeView, StoreModel,
+            StoreDetailView, StoreAllCouponCompositeView, StoreYourCouponCompositeView,
+            StoreAllCouponCollection, StoreYourCouponCollection){
+
     return {
         showList: function(page){
             console.log('store list');
@@ -49,11 +56,71 @@ define([
                         model: model
                     });
                     storeView.render();
+
+                    var token = window.localStorage.getItem('token');
+                    var allCouponsCollection = new StoreAllCouponCollection();
+
+                    allCouponsCollection.fetch({
+                        data: {
+                            shopperId: id,
+                            apikey: token
+                        },
+                        success: function(collection){
+                            var allCouponsView = new StoreAllCouponCompositeView({
+                                collection:collection
+                            });
+                            allCouponsView.render();
+                        },
+                        error: function(collection, response){
+                            console.log('load coupons error');
+                        }
+                    });
                 },
                 error: function(model, response){
                     console.log('error', model, response);
                 }
             });
+        },
+        allCoupons: function(id){
+            var token = window.localStorage.getItem('token');
+            var allCouponsCollection = new StoreAllCouponCollection();
+
+            allCouponsCollection.fetch({
+                data: {
+                    shopperId: id,
+                    apikey: token
+                },
+                success: function(collection){
+                    var allCouponsView = new StoreAllCouponCompositeView({
+                        collection:collection
+                    });
+                    allCouponsView.render();
+                },
+                error: function(collection, response){
+                    console.log('load coupons error');
+                }
+            });
+
+        },
+        youCoupons: function(id){
+            var token = window.localStorage.getItem('token');
+            var allCouponsCollection = new StoreYourCouponCollection();
+
+            allCouponsCollection.fetch({
+                data: {
+                    apikey: token
+                },
+                success: function(collection){
+                    var yourCouponsView = new StoreYourCouponCompositeView({
+                        collection:collection
+                    });
+                    yourCouponsView.render();
+                },
+                error: function(collection, response){
+                    console.log('load coupons error');
+                }
+            });
+
         }
     }
 });

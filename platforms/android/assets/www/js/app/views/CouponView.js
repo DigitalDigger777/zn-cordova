@@ -9,9 +9,8 @@ define([
 ], function(Marionette, template){
     //console.log(Marionette);
     return Marionette.View.extend({
-        el: '#content',
+        el: '#page-content-scroll',
         template: function(model){
-            console.log('vm', model);
             return _.template(template)(model);
         },
         onRender: function(){

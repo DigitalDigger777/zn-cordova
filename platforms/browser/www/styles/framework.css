@@ -2477,7 +2477,7 @@ ul.tabs li.active-tab{
 .button-green:hover{	background-color:#2ecc71;}
 
 .blue-3d{				padding-top:5px; padding-bottom:5px; border-bottom:solid 4px #194e70;}
-.button-blue{			background-color:#2980b9; color:#FFFFFF;}
+.button-blue{			background-color:#74bcf7; color:#FFFFFF;}
 .button-blue:hover{		background-color:#3498db;}
 
 .magenta-3d{			padding-top:5px; padding-bottom:5px; border-bottom:solid 4px #602e75;}
@@ -3547,10 +3547,11 @@ calendar*{
 }
 
 .page-profile-header{
-    padding-top:40px;
-    padding-bottom:30px;
-    background-image:url(../images/pictures/1.jpg);
-    background-size:cover;
+    /*padding-top:40px;*/
+    /*padding-bottom:30px;*/
+    /*background-image:url(../images/pictures/1.jpg);*/
+    /*background-size:cover;*/
+    margin-bottom: 20px;
 }
 
 .page-profile-header .overlay{
@@ -3602,23 +3603,29 @@ calendar*{
 }
 
 .page-profile-header img{
-    width:120px;
-    height:120px;
+    width:100px;
+    height:100px;
     border-radius:120px;
-    margin-bottom:30px;
+    margin-bottom:10px;
     margin-left:auto;
     margin-right:auto;
     z-index:4;
     border:solid 4px rgba(255,255,255,0.9);
 }
 
-.page-profile-header h3{
+.page-profile-header h4{
     z-index:4;
     position:relative;
-    text-align:center;
-    color:#FFFFFF;
+    /*text-align:center;*/
+    color:#666666;
     font-weight:400;
     margin-bottom:5px;
+    margin-top: 5px;
+    line-height: 100px;
+}
+
+.page-profile {
+    margin-bottom: 100px;
 }
 
 .page-profile .follow-buttons:after, .page-profile-followers a:after {
@@ -3642,6 +3649,16 @@ calendar*{
 
 .page-profile-header em i{
     padding-right:10px;
+}
+
+.page-profile-header .float-left:first-child {
+    width: 40%;
+    margin-right:0;
+}
+
+.page-profile-header .float-left:last-child {
+    width: 60%;
+    margin-right:0;
 }
 
 .page-profile-followers a{
@@ -4024,7 +4041,7 @@ calendar*{
     padding-top:0px;
     padding-bottom:0px;
     height:45px;
-    line-height:45px;
+    /*line-height:45px;*/
     width:100%;
     display:block;
     background-color:rgba(255,255,255,1);
@@ -4054,7 +4071,7 @@ calendar*{
 .page-login .login-date input:focus, 
 .page-login .login-input input:focus{
     color:#1f1f1f;
-    border-bottom:solid 2px #27ae60;
+    border-bottom:solid 2px #74bcf7;
     transition:all 250ms ease;
 }
 
@@ -9934,6 +9951,7 @@ button.swiper-pagination-bullet {
 }
 #page-content-scroll > .content {
     margin-bottom:0;
+    padding-top: 12px;
 }
 
 .zan-card .decoration {
@@ -10055,10 +10073,10 @@ dialog {
 }
 
 .zan-card-1 > img {
-    width:105px;
+    width:130px;
     padding-top: 12px;
     padding-left: 12px;
-    position: absolute;
+    margin: 0 auto;
 }
 
 .zan-card-1 > a {
@@ -10071,9 +10089,7 @@ dialog {
 }
 
 .zan-card-1 > .zan-wrap-content {
-    padding-left:116px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 15px;
 }
 
 .zan-card-1 a > .zan-wrap-content {
@@ -10128,6 +10144,26 @@ dialog {
     padding-top: 3px;
 }
 
+.zan-card-1 .float-left {
+    width: 50%;
+    margin: 0;
+    text-decoration: underline;
+}
+
+.zan-card-1 .center-text {
+    padding-bottom: 10px;
+}
+
+.zan-card-1 .center-text a {
+    display: inline-block;
+}
+
+.zan-card-1 .center-text a img {
+    width: auto;
+    margin: 10px;
+    position: relative;
+}
+
 .zan-filter-tabs {
     margin-bottom: 15px;
 }
@@ -10152,8 +10188,8 @@ dialog {
 .page-profile-header .zan-change-button a{
     text-align:center;
     margin: 0 auto;
-    color:#FFFFFF;
-    border:solid 2px rgba(255,255,255,0.5);
+    color:#666666;
+    border:solid 2px rgba(102,102,102,0.5);
     width:100px;
     padding-top:3px;
     padding-bottom:3px;
@@ -10168,7 +10204,7 @@ dialog {
 }
 
 .page-profile-header .zan-change-button a:hover{
-    background-color:rgba(255,255,255,0.1);
+    background-color:rgba(102,102,102,0.1);
     opacity:1;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
@@ -10178,7 +10214,7 @@ dialog {
 }
 
 .page-profile-header .zan-change-button{
-    width:240px;
+    /*width:240px;*/
     margin-left:auto;
     margin-right:auto;
 }
@@ -10190,8 +10226,7 @@ dialog {
     font-size:12px;
     color:#666666;
     margin-bottom:30px;
-    background-color: gray;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
     padding: 3px;
 }
 
@@ -10220,23 +10255,38 @@ dialog {
 }
 
 #zan-personal-data {
-    padding: 20px;
+    /*padding: 20px;*/
+}
+
+#zan-personal-data label,
+#zan-personal-data input {
+    display: inline-block;
 }
 
 #zan-personal-data > div {
     width: 100%;
     font-size: 16px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #zan-personal-data > div:last-child {
-    border-bottom: none;
     margin-bottom: 0;
 }
 
 #zan-personal-data {
 
+}
+
+#zan-gender {
+    color: #666666;
+}
+
+#zan-personal-data > div {
+    position: relative;
 }
 
 #zan-personal-data label {
@@ -10246,9 +10296,18 @@ dialog {
 
 #zan-personal-data input {
     background: none;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    width: 100%;
+    /*width: 100%;*/
+    max-width: 130px;
+    position: absolute;
+    right: 15px;
+    top: 1px;
+    text-align: right;
+}
+
+#zan-personal-data select {
+    position: absolute;
+    right: 15px;
+    top: 0;
 }
 
 #zan-gender-list {
@@ -10258,6 +10317,25 @@ dialog {
 
 #zan-personal-data li {
     list-style: none;
+}
+
+#zan-personal-data p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+#zan-personal-data p > a {
+    color: inherit;
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+#zan-personal-data .fa-chevron-right {
+    position: absolute;
+    right:0;
+    line-height:24px;
+
 }
 
 #zan-gender,
@@ -10403,6 +10481,11 @@ dialog {
     text-align: center;
 }
 
+::-webkit-input-placeholder {color:#666666;}
+::-moz-placeholder          {color:#666666;}
+:-moz-placeholder           {color:#666666;}
+:-ms-input-placeholder      {color:#666666;}
+
 .zan-list-radio li {
     list-style-type: none;
     margin: 7px 0 30px;
@@ -10466,4 +10549,123 @@ dialog {
 
 .zan-coupon-alert-setting .col-2 {
     width: 85%;
+}
+
+.zan-login-content {
+    padding-top: 100px !important;
+}
+
+.zan-login-content .login-button {
+    margin-bottom: 5px;
+}
+
+.zan-question a {
+    color: #74bcf7;
+    text-decoration: underline;
+}
+
+.zan-coupon-send {
+    padding-top: 30px;
+}
+
+.zan-coupon-send .container {
+    padding: 30px 15px 15px 15px;
+    margin-bottom: 0;
+}
+
+.zan-coupon-send .container input {
+    font-size: 16px;
+}
+
+.zan-coupon-send .zan-email-input {
+    margin-bottom: 20px;
+}
+
+.zan-coupon-send .button {
+    font-size: 16px;
+}
+
+.zan-footer-text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid #74bcf7;
+    padding: 10px;
+}
+
+.zan-footer-text a {
+    color: #74bcf7;
+    text-decoration: underline;
+
+}
+
+.zan-footer-text p {
+    margin-bottom: 0;
+}
+
+#page-sign-up {
+    margin-top: 90px;
+}
+
+.mdl-dialog div {
+    display: inherit;
+}
+#zan-change-password {
+    margin-top: 50px;
+}
+
+#zan-change-password .decoration {
+    margin-bottom: 0;
+}
+#zan-change-password label {
+    margin-left: 20px;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#zan-change-password input{
+    background: none;
+    width: 100%;
+    padding-left: 30px;
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#zan-change-password > div {
+    margin-bottom: 60px;
+}
+
+
+#zan-change-password ::-webkit-input-placeholder {color:#999999;}
+#zan-change-password ::-moz-placeholder          {color:#999999;}
+#zan-change-password :-moz-placeholder           {color:#999999;}
+#zan-change-password :-ms-input-placeholder      {color:#999999;}
+
+.zan-sign-up-step-2 {
+    margin-top: 50px;
+}
+
+.zan-sign-up-step-2 .button-fullscreen {
+    margin-bottom: 8px;
+}
+
+#zan-gender {
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.zan-selected-time {
+    padding: 15px 15px 0;
+}
+
+.zan-selected-time p {
+    margin-bottom: 0;
+}
+
+.zan-selected-time p .fa {
+    margin-right: 15px;
 }

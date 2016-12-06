@@ -120,9 +120,9 @@
 }
 
 .zan-login-header .header-logo {
-    height: 46.8px !important;
-    width: 52px !important;
-    margin-top:15px !important;
+    height: 40px !important;
+    width: 44px !important;
+    margin-top:17px !important;
 }
 
 .header-light .header-logo{
@@ -2490,6 +2490,10 @@ html, body {
 
 .header-light {
     background-color: #fFFFFF;
+}
+
+.header-light a {
+    color: #FFFFFF !important;
 }
 
 .header-light .header-icon-1 {

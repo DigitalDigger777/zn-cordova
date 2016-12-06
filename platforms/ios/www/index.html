@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
-
+    <link rel="stylesheet" type="text/css" href="scripts/ios_7_drums/lib/drum.css">
 
     <script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/plugins.js"></script>
@@ -40,6 +40,37 @@
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
 
+    <style>
+        #drum_zan-time-range {
+            width: 100px;
+        }
+
+        #drum_zan-time-range,
+        #drum_zan-time-before {
+            float: left;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        .zan-coupon-alert-setting .zan-select-wrapper {
+            width: 150px;
+            margin: 0 auto;
+        }
+        .zan-container-select {
+            position: relative;
+        }
+        .zan-container-select .lines {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-top: solid 1px #CCC;
+            border-bottom: solid 1px #CCC;
+            position: absolute;
+            top: 61px;
+            left: 0px;
+            width: 100%;
+            height: 30px!important;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,10 +80,8 @@
         <img class="page-preload" src="images/preload.gif">
     </div>
 
-    <div class="header header-light">
-
+    <div id="header" class="header header-light">
         <a href="#" class="header-logo"></a>
-
     </div>
 
 
@@ -66,26 +95,26 @@
             <!--</p>-->
             <!--</div>-->
 
-            <div class="content">
-                <div class="home-tabs">
-                    <a class="activate-received active-home-tab" href="#received-list/1">Received</a>
-                    <a class="activate-coupons" href="#coupon-list/1">Coupons</a>
-                    <a class="activate-friends" href="#friend-list/1">Friend's</a>
-                    <div class="clear"></div>
-                </div>
-            </div>
+            <!--<div class="content">-->
+                <!--<div class="home-tabs">-->
+                    <!--<a class="activate-received active-home-tab" href="#received-list/1">Received</a>-->
+                    <!--<a class="activate-coupons" href="#coupon-list/1">Coupons</a>-->
+                    <!--<a class="activate-friends" href="#friend-list/1">Friend's</a>-->
+                    <!--<div class="clear"></div>-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="content" id="received">
+            <!--<div class="content" id="content">-->
 
-            </div>
+            <!--</div>-->
 
-            <div class="content" id="coupons">
+            <!--<div class="content" id="coupons">-->
 
-            </div>
+            <!--</div>-->
 
-            <div class="content" id="friends">
+            <!--<div class="content" id="friends">-->
 
-            </div>
+            <!--</div>-->
 
             <div class="footer footer-light">
 
@@ -109,5 +138,6 @@
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 
-</body><a href="#" class="back-to-top-badge"><i class="fa fa-caret-up"></i>Back to top</a>
+</body>
+<!--<a href="#" class="back-to-top-badge"><i class="fa fa-caret-up"></i>Back to top</a>-->
 

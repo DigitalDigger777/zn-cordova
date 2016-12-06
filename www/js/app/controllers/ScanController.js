@@ -2,7 +2,7 @@
  * Created by korman on 23.11.16.
  */
 
-define(['model/CouponModel', 'view/coupon/CouponDetailView'], function(CouponModel, CouponDetailView){
+define(['model/CouponModel', 'view/coupon/ScanCouponView'], function(CouponModel, ScanCouponView){
     return {
         scan: function(){
             //TODO: release scan
@@ -16,17 +16,24 @@ define(['model/CouponModel', 'view/coupon/CouponDetailView'], function(CouponMod
                         if(result.format == "QR_CODE")
                         {
                             navigator.notification.prompt("Please enter name of data",  function(input){
-                                var name = input.input1;
-                                var value = result.text;
+                                var model = new CouponModel();
+                                model.set('id', result.text);
+                                model.fetch({
+                                    dataType:'jsonp',
+                                    success: function(model, response){
+                                        //console.log('success', model, response);
+                                        //console.log(model.get('barcodeContent'));
+                                        console.log(model.toJSON());
 
-                                var data = localStorage.getItem("LocalData");
-                                console.log(data);
-                                data = JSON.parse(data);
-                                data[data.length] = [name, value];
-
-                                localStorage.setItem("LocalData", JSON.stringify(data));
-
-                                alert("Done");
+                                        var scanCouponView = new ScanCouponView({
+                                            model: model
+                                        });
+                                        scanCouponView.render();
+                                    },
+                                    error: function(model, response){
+                                        console.log('error', model, response);
+                                    }
+                                });
                             });
                         }
 
@@ -38,13 +45,12 @@ define(['model/CouponModel', 'view/coupon/CouponDetailView'], function(CouponMod
                                 success: function(model, response){
                                     //console.log('success', model, response);
                                     //console.log(model.get('barcodeContent'));
-
                                     console.log(model.toJSON());
 
-                                    var couponView = new CouponDetailView({
+                                    var scanCouponView = new ScanCouponView({
                                         model: model
                                     });
-                                    couponView.render();
+                                    scanCouponView.render();
                                 },
                                 error: function(model, response){
                                     console.log('error', model, response);
