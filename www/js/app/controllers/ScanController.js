@@ -25,12 +25,13 @@ define(['model/CouponModel', 'view/coupon/ScanCouponView'], function(CouponModel
                                 success: function(model, response){
                                     //console.log('success', model, response);
                                     //console.log(model.get('barcodeContent'));
-                                    console.log(model.toJSON());
-                                    navigator.notification.alert(model.toJSON());
-                                    var scanCouponView = new ScanCouponView({
-                                        model: model
-                                    });
-                                    scanCouponView.render();
+                                    //console.log(model.toJSON());
+                                    //navigator.notification.alert(model.toJSON());
+                                    //var scanCouponView = new ScanCouponView({
+                                    //    model: model
+                                    //});
+                                    //scanCouponView.render();
+                                    window.location = '#coupon-list/1';
                                 },
                                 error: function(model, response){
                                     console.log('error', model, response);
@@ -49,12 +50,13 @@ define(['model/CouponModel', 'view/coupon/ScanCouponView'], function(CouponModel
                                 success: function(model, response){
                                     //console.log('success', model, response);
                                     //console.log(model.get('barcodeContent'));
-                                    console.log(model.toJSON());
+                                    //console.log(model.toJSON());
 
-                                    var scanCouponView = new ScanCouponView({
-                                        model: model
-                                    });
-                                    scanCouponView.render();
+                                    //var scanCouponView = new ScanCouponView({
+                                    //    model: model
+                                    //});
+                                    //scanCouponView.render();
+                                    window.location = '#coupon-list/1';
                                 },
                                 error: function(model, response){
                                     console.log('error', model, response);

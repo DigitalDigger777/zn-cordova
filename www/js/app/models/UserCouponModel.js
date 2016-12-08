@@ -18,7 +18,9 @@ define(['backbone'], function(Backbone){
                         apikey: this.get('apikey'),
                         task: this.get('task'),
                         couponId: this.get('couponId')
-                    }
+                    },
+                    success: this.get('success'),
+                    error: this.get('error')
                 });
             }
         });
