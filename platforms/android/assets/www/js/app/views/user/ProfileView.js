@@ -9,6 +9,18 @@ define([
 ], function(Marionette, template){
     return Marionette.View.extend({
         el: '#page-content-scroll',
+        ui: {
+            logoutButton: '#zan-personal-data .button-red'
+        },
+        events: {
+            'click @ui.logoutButton': function(e){
+                e.preventDefault();
+                window.localStorage.clear();
+                window.location = '#login'
+
+                $('#mobileMenuView').html('');
+            }
+        },
         template: function(model){
             return _.template(template)(model);
         },

@@ -72,7 +72,7 @@ ext {
     }
     // .properties files to use for release signing.
     if (!project.hasProperty('cdvReleaseSigningPropertiesFile')) {
-        cdvReleaseSigningPropertiesFile = null
+        cdvReleaseSigningPropertiesFile = '/var/www/jerry/zan-cordova/platforms/android/keystore.properties'
     }
     // .properties files to use for debug signing.
     if (!project.hasProperty('cdvDebugSigningPropertiesFile')) {

@@ -3,7 +3,7 @@
  */
 
 require.config({
-    urlRoot: 'http://xu.joinppcg.com/',
+    urlRoot: 'http://dev.xu/app_dev.php/',
     baseUrl: './',
     paths: {
         vendor: "./vendor",
@@ -27,6 +27,7 @@ require.config({
 
         hammerjs: "./vendor/hammerjs/hammer.min",
         "jquery-hammer": "./vendor/jquery-hammerjs/jquery.hammer",
+        "backbone-hammer": "./vendor/backbone.hammer/backbone.hammer.js",
         "hammer-fakemultitouch": "./vendor/hammerjs/plugins/hammer.fakemultitouch"
     },
     shim: {
@@ -57,6 +58,11 @@ require(['./js/app/main'], function(ZanApp){
     app.zan = new ZanApp();
     app.zan.start();
 });
+
+define(['hammerjs'], function(Hammer){
+    window.Hammer = Hammer;
+});
+
 //require([
 //
 //    'text!js/app/templates/received.html'

@@ -7,6 +7,7 @@ define([
     'view/ReceivedCompositeView',
     'collection/ReceivedCollection',
     'view/HeaderView',
+    'view/MobileMenuView',
     'router/CouponRouter',
     'router/FriendRouter',
     'router/MessageRouter',
@@ -15,7 +16,7 @@ define([
     'router/ScanRouter',
     'router/StoreRouter',
     'router/SignUpRouter'
-], function(Backbone, ReceivedCompositeView, ReceivedCollection, HeaderView){
+], function(Backbone, ReceivedCompositeView, ReceivedCollection, HeaderView, MobileMenuView){
 
 
     var zan = Backbone.Marionette.Application.extend({
@@ -46,6 +47,9 @@ define([
 
                 var header = new HeaderView();
                 header.render();
+
+                var mobileMenu = new MobileMenuView();
+                mobileMenu.render();
             } else {
                 //Backbone.history.navigate('#login', true);
                 window.location.hash = '#login'

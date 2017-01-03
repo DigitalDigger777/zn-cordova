@@ -8,8 +8,15 @@ define([
     'view/coupon/CouponDetailView',
     'model/CouponModel',
     'view/coupon/CouponAlertSettingView',
-    'view/coupon/CouponAlertChooseView'
-], function(CouponCollection, CouponCompositeView, CouponDetailView, CouponModel, CouponAlertSettingView, CouponAlertChooseView){
+    'view/coupon/CouponAlertChooseView',
+    'model/UserCouponModel'
+], function(CouponCollection,
+            CouponCompositeView,
+            CouponDetailView,
+            CouponModel,
+            CouponAlertSettingView,
+            CouponAlertChooseView,
+            UserCouponModel){
     return {
         showList: function(page){
 
@@ -63,8 +70,26 @@ define([
             alertSettingView.render();
         },
         alertChoose: function(id){
-            var alertChoose = new CouponAlertChooseView();
-            alertChoose.render();
+            var token = window.localStorage.getItem('token');
+            var userCouponModel = new UserCouponModel({
+                apikey: token,
+                task: 'load',
+                couponId: id,
+                success: function(model, response){
+                    console.log(model);
+                    var _model = new UserCouponModel(model);
+                    var alertChoose = new CouponAlertChooseView({
+                        model: _model
+                    });
+                    alertChoose.render();
+                },
+                error: function(model, response){
+                    console.log('test');
+                }
+            });
+
+            userCouponModel.set('id', id);
+            userCouponModel.fetch();
         }
     }
 });
