@@ -6,8 +6,10 @@ define([
     'view/user/ProfileView',
     'view/user/LoginView',
     'view/user/LoginHelpView',
+    'view/user/ChangePassView',
+    'view/user/MyQrView',
     'model/CurrentUserModel'
-], function(ProfileView, LoginView, LoginHelpView, CurrentUserModel){
+], function(ProfileView, LoginView, LoginHelpView, ChangePassView, MyQrView, CurrentUserModel){
     return {
         showProfile: function(){
             console.log('show profile');
@@ -33,6 +35,14 @@ define([
             });
 
 
+        },
+        changePass: function(){
+            var changePassView = new ChangePassView();
+            changePassView.render();
+        },
+        myQrCode: function(){
+            var myQrView = new MyQrView();
+            myQrView.render();
         },
         login: function(){
             console.log('login');

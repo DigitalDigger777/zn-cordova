@@ -1,5 +1,9 @@
 <a href="#store-item/<%=id %>">
-    <img class="preload-image" data-original="images/zan-images/shop-logo.gif" alt="img" src="images/pictures/1t.jpg" style="display: block;">
+    <% if (logo == null) {%>
+        <img class="preload-image" data-original="img/no_logo_110x110.png" alt="img" src="img/no_logo_110x110.png" style="display: block;">
+    <% } else {%>
+        <img class="preload-image" data-original="images/zan-images/shop-logo.gif" alt="img" src="images/pictures/1t.jpg" style="display: block;">
+    <% } %>
     <div class="zan-wrap-content">
         <strong><%=name %></strong>
         <p><%=country %></p>

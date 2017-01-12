@@ -30,7 +30,7 @@ define([
                 //coupon-item/19
                 //store-item/6
                 //send/6
-                var reg = /(coupon-item|store-item|send|alert-setting|alert-choose)\/[0-9]+/;
+                var reg = /(coupon-item|store-item|send|alert-setting|alert-choose|change-password|my-qr-code)\/{0,1}[0-9]{0,}/;
 
                 if (reg.test(window.location.hash)) {
                     $('#history_back').fadeIn(10);

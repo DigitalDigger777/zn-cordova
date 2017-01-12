@@ -1,8 +1,14 @@
-<a href="coupon-detail.html">
+<a href="#coupon-item/<%=id%>">
     <div class="zan-container zan-red">
-        <h4>Spent over $20 get one free coffee 1</h4>
-        <b>Days left: 15</b>
-        <em>2016.09.12-2016.12.01</em>
+        <h4><%=coupon.couponTemplate.title %></h4>
+        <%
+            var oneDay = 24*60*60*1000;
+            var createdDate = new Date(coupon.createdDate.date);
+            var expirationDate = new Date(coupon.expirationDate.date);
+            var diffDays = Math.round(Math.abs((createdDate.getTime() - expirationDate.getTime())/(oneDay)));
+        %>
+        <b>Days left: <%=diffDays %></b>
+        <em><%=createdDate.toLocaleDateString() %>-<%=expirationDate.toLocaleDateString() %></em>
     </div>
 </a>
 <div class="zan-action-button">

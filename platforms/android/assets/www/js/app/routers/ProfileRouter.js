@@ -8,6 +8,8 @@ define(['marionette', 'controller/ProfileController'], function(Marionette, Prof
         controller: ProfileController,
         appRoutes: {
             'profile':'showProfile',
+            'change-password': 'changePass',
+            'my-qr-code': 'myQrCode',
             'login': 'login',
             'login-help': 'loginHelp'
         }
