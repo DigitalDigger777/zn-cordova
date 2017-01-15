@@ -57,6 +57,19 @@
         <icon src="res/ios/icons/icon-50@2x.png" width="100" height="100" />
         <!-- iPad Pro -->
         <icon src="res/ios/icons/icon-83.5@2x.png" width="167" height="167" />
+
+        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+            <array>
+                <dict>
+                    <key>NSPhotoLibraryUsageDescription</key>
+                    <string>Photo Library Access Warning</string>
+                </dict>
+                <dict>
+                    <key>NSCameraUsageDescription</key>
+                    <string>Camera Access Warning</string>
+                </dict>
+            </array>
+        </config-file>
     </platform>
     <engine name="android" spec="~6.0.0" />
     <engine name="ios" spec="~4.3.0" />
