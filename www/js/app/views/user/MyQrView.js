@@ -14,6 +14,12 @@ define([
         },
         onRender: function(){
             console.log('Render My QR');
+
+            $(".preload-image").lazyload({
+                threshold : 100,
+                effect : "fadeIn",
+                container: $("#page-content-scroll")
+            });
         }
     });
 });

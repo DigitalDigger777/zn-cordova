@@ -13,7 +13,7 @@
     <key>CFBundleIcons~ipad</key>
     <dict/>
     <key>CFBundleIdentifier</key>
-    <string>dev.zanmobile</string>
+    <string>zan.user.mobile</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
@@ -53,9 +53,9 @@
       <true/>
     </dict>
     <key>NSCameraUsageDescription</key>
-    <string/>
+    <string>Camera Usage Access Warning</string>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string/>
+    <string>Photo Library Access Warning</string>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string/>
   </dict>
