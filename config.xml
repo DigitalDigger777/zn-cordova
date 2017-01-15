@@ -63,10 +63,7 @@
                 <key>NSPhotoLibraryUsageDescription</key>
                 <string>Photo Library Access Warning</string>
             </dict>
-            <dict>
-                <key>NSCameraUsageDescription</key>
-                <string>Camera Access Warning</string>
-            </dict>
+
         </config-file>
         <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
             <string>Camera Access Warning</string>
