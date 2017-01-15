@@ -58,8 +58,15 @@
         <!-- iPad Pro -->
         <icon src="res/ios/icons/icon-83.5@2x.png" width="167" height="167" />
 
-        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
-            <string>Photo Library Access Warning</string>
+        <config-file target="*-Info.plist">
+            <dict>
+                <key>NSPhotoLibraryUsageDescription</key>
+                <string>Photo Library Access Warning</string>
+            </dict>
+            <dict>
+                <key>NSCameraUsageDescription</key>
+                <string>Camera Access Warning</string>
+            </dict>
         </config-file>
         <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
             <string>Camera Access Warning</string>
