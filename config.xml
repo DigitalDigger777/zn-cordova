@@ -58,7 +58,7 @@
         <!-- iPad Pro -->
         <icon src="res/ios/icons/icon-83.5@2x.png" width="167" height="167" />
 
-        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+        <config-file target="zan-Info.plist" parent="CFBundleURLTypes">
             <array>
                 <dict>
                     <key>NSPhotoLibraryUsageDescription</key>
