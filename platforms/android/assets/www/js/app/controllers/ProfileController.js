@@ -41,8 +41,33 @@ define([
             changePassView.render();
         },
         myQrCode: function(){
-            var myQrView = new MyQrView();
-            myQrView.render();
+
+            console.log('show profile');
+            var token = window.localStorage.getItem('token');
+            var currentUserModel = new CurrentUserModel();
+
+            currentUserModel.set('id', 0);
+            currentUserModel.fetch({
+                dataType: 'jsonp',
+                data: {
+                    apikey: token
+                },
+                success: function(model, response){
+                    console.log(model.toJSON());
+                    //var profileView = new ProfileView({
+                    //    model: model
+                    //});
+                    //profileView.render();
+
+                    var myQrView = new MyQrView({
+                        model: model
+                    });
+                    myQrView.render();
+                },
+                error: function(model, response){
+                    console.log('Error' + response.responseJSON.message);
+                }
+            });
         },
         login: function(){
             console.log('login');

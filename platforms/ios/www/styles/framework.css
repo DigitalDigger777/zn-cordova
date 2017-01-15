@@ -9894,19 +9894,14 @@ button.swiper-pagination-bullet {
 }
 
 .zan-content-header h1 {
-    background: rgba(213,0,0,1);
-    background: -moz-radial-gradient(center, ellipse cover, rgba(213,0,0,1) 0%, rgba(213,0,0,1) 23%, rgba(248,80,50,1) 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(213,0,0,1)), color-stop(23%, rgba(213,0,0,1)), color-stop(100%, rgba(248,80,50,1)));
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(213,0,0,1) 0%, rgba(213,0,0,1) 23%, rgba(248,80,50,1) 100%);
-    background: -o-radial-gradient(center, ellipse cover, rgba(213,0,0,1) 0%, rgba(213,0,0,1) 23%, rgba(248,80,50,1) 100%);
-    background: -ms-radial-gradient(center, ellipse cover, rgba(213,0,0,1) 0%, rgba(213,0,0,1) 23%, rgba(248,80,50,1) 100%);
-    background: radial-gradient(ellipse at center, rgba(213,0,0,1) 0%, rgba(213,0,0,1) 23%, rgba(248,80,50,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d50000', endColorstr='#f85032', GradientType=1 );
-    /*background-color: #d50000;*/
-    /*background: -webkit-radial-gradient(#d50000, #ef5350, #ffcdd2);*/
-    /*background: -o-radial-gradient(#d50000, #ef5350, #ffcdd2); !* For Opera 11.1 to 12.0*!*/
-    /*background: -moz-radial-gradient(#d50000, #ef5350, #ffcdd2);  !*For Firefox 3.6 to 15*!*/
-    /*background: radial-gradient(#d50000, #ef5350, #ffcdd2);  !*Standard syntax*!*/
+    /*background: rgba(213,0,0,1);*/
+    /*background: -moz-radial-gradient(center, ellipse cover, rgba(213,0,0,1) 0%, rgba(213,0,0,1) 23%, rgba(248,80,50,1) 100%);*/
+    /*background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(213,0,0,1)), color-stop(23%, rgba(213,0,0,1)), color-stop(100%, rgba(248,80,50,1)));*/
+    /*background: -webkit-radial-gradient(center, ellipse cover, rgba(213,0,0,1) 0%, rgba(213,0,0,1) 23%, rgba(248,80,50,1) 100%);*/
+    /*background: -o-radial-gradient(center, ellipse cover, rgba(213,0,0,1) 0%, rgba(213,0,0,1) 23%, rgba(248,80,50,1) 100%);*/
+    /*background: -ms-radial-gradient(center, ellipse cover, rgba(213,0,0,1) 0%, rgba(213,0,0,1) 23%, rgba(248,80,50,1) 100%);*/
+    /*background: radial-gradient(ellipse at center, rgba(213,0,0,1) 0%, rgba(213,0,0,1) 23%, rgba(248,80,50,1) 100%);*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d50000', endColorstr='#f85032', GradientType=1 );*/
     text-align: center;
     color: #ffffff;
     line-height: 100px;
@@ -10095,7 +10090,12 @@ dialog {
 .zan-card-1 a > .zan-wrap-content {
     padding-left:120px;
     padding-top: 12px;
-    padding-bottom: 12px;
+    /*padding-bottom: 12px;*/
+    padding-bottom: 6px;
+}
+
+.zan-card-1 a > .zan-wrap-content p {
+    margin-bottom: 0;
 }
 
 .zan-card-1 a > .zan-wrap-content .fa {

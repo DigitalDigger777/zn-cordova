@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "dev.zanmobile"
-        },
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "dev.zanmobile"
         },
@@ -21,11 +18,17 @@
         },
         "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "dev.zanmobile"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "zan.user.mobile"
+        },
+        "cordova-custom-config": {
+            "PACKAGE_NAME": "zan.user.mobile"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "dev.zanmobile"
+            "PACKAGE_NAME": "zan.user.mobile"
         }
     }
 }

@@ -15,6 +15,7 @@ define([
         },
         onRender: function(){
             console.log('Render coupon detail');
+
             $(".preload-image").lazyload({
                 threshold : 100,
                 effect : "fadeIn",

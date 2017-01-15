@@ -29,6 +29,7 @@ define([
                 userCoupon.save(null, {
                     success: function(model, response){
                         console.log(model.toJSON());
+                        navigator.notification.alert('Coupon added');
                     },
                     error: function(model, response){
                         console.log('error' + model.toJSON());

@@ -1,11 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="dev.zanmobile" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="zan.user.mobile" version="1.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
-    </feature>
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature>
     <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
@@ -16,12 +13,15 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
     <name>zan</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Mobile coupon book which full of local rewards.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="korman.yuri@gmail.com" href="http://xu.joinppcg.com">
+        Mobile coupon book which full of local rewards.
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -32,6 +32,12 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
+    <icon density="ldpi" src="res/android/icons/mipmap-ldpi/ic_launcher.png" />
+    <icon density="mdpi" src="res/android/icons/mipmap-mdpi/ic_launcher.png" />
+    <icon density="hdpi" src="res/android/icons/mipmap-hdpi/ic_launcher.png" />
+    <icon density="xhdpi" src="res/android/icons/mipmap-xhdpi/ic_launcher.png" />
+    <icon density="xxhdpi" src="res/android/icons/mipmap-xxhdpi/ic_launcher.png" />
+    <icon density="xxxhdpi" src="res/android/icons/mipmap-xxxhdpi/ic_launcher.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="android-minSdkVersion" value="14" />
 </widget>

@@ -2,7 +2,7 @@
     <img class="preload-image" data-original="images/zan-images/the_loop_restaurant_logo_by_yasergrafix-d5f3q5p_PicViewer.jpg" alt="img">
     <strong><%=coupon.couponTemplate.shopper.name %></strong>
 </div>
-<div class="zan-container zan-red">
+<div class="zan-container <%=coupon.couponTemplate.styleScheme['background-class'] %>">
     <h4><%=coupon.couponTemplate.title %></h4>
     <%
         var oneDay = 24*60*60*1000;

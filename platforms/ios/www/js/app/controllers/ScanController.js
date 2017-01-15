@@ -15,19 +15,31 @@ define(['model/CouponModel', 'view/coupon/ScanCouponView'], function(CouponModel
                     {
                         if(result.format == "QR_CODE")
                         {
-                            navigator.notification.prompt("Please enter name of data",  function(input){
-                                var name = input.input1;
-                                var value = result.text;
 
-                                var data = localStorage.getItem("LocalData");
-                                console.log(data);
-                                data = JSON.parse(data);
-                                data[data.length] = [name, value];
+                            //navigator.notification.alert(result.text);
 
-                                localStorage.setItem("LocalData", JSON.stringify(data));
-
-                                alert("Done");
+                            var model = new CouponModel();
+                            model.set('id', result.text);
+                            model.fetch({
+                                dataType:'jsonp',
+                                success: function(model, response){
+                                    //console.log('success', model, response);
+                                    //console.log(model.get('barcodeContent'));
+                                    //console.log(model.toJSON());
+                                    //navigator.notification.alert(model.toJSON());
+                                    //var scanCouponView = new ScanCouponView({
+                                    //    model: model
+                                    //});
+                                    //scanCouponView.render();
+                                    window.location = '#coupon-list/1';
+                                },
+                                error: function(model, response){
+                                    console.log('error', model, response);
+                                }
                             });
+                            //navigator.notification.prompt("Please enter name of data",  function(input){
+                            //
+                            //});
                         }
 
                         if (result.format == 'Fake') {
@@ -38,12 +50,13 @@ define(['model/CouponModel', 'view/coupon/ScanCouponView'], function(CouponModel
                                 success: function(model, response){
                                     //console.log('success', model, response);
                                     //console.log(model.get('barcodeContent'));
-                                    console.log(model.toJSON());
+                                    //console.log(model.toJSON());
 
-                                    var scanCouponView = new ScanCouponView({
-                                        model: model
-                                    });
-                                    scanCouponView.render();
+                                    //var scanCouponView = new ScanCouponView({
+                                    //    model: model
+                                    //});
+                                    //scanCouponView.render();
+                                    window.location = '#coupon-list/1';
                                 },
                                 error: function(model, response){
                                     console.log('error', model, response);

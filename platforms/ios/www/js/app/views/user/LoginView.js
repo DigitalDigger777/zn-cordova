@@ -5,8 +5,10 @@
 define([
     'marionette',
     'backbone',
-    'text!template/user/login.html'
-], function(Marionette, Backbone, template){
+    'text!template/user/login.html',
+    'view/HeaderView',
+    'view/MobileMenuView'
+], function(Marionette, Backbone, template, HeaderView, MobileMenuView){
     return Marionette.View.extend({
         el: '#page-content-scroll',
         ui: {
@@ -34,7 +36,11 @@ define([
                         console.log(data.token);
                         window.localStorage.setItem('token', data.token);
                         window.location.hash = '#received-list/1';
+                        var header = new HeaderView();
+                        header.render();
 
+                        var mobileMenu = new MobileMenuView();
+                        mobileMenu.render();
                     },
                     error: function(error){
                         console.log(error);
