@@ -44,9 +44,7 @@
         <icon height="50" src="res/ios/icons/icon-50.png" width="50" />
         <icon height="100" src="res/ios/icons/icon-50@2x.png" width="100" />
         <icon height="167" src="res/ios/icons/icon-83.5@2x.png" width="167" />
-        <config-file parent="NSPhotoLibraryUsageDescription" target="*-Info.plist">
-            <string>Photo Library Access Warning</string>
-        </config-file>
+
 
     </platform>
     <engine name="android" spec="~6.0.0" />
