@@ -47,9 +47,7 @@
         <config-file parent="NSPhotoLibraryUsageDescription" target="*-Info.plist">
             <string>Photo Library Access Warning</string>
         </config-file>
-        <config-file parent="NSCameraUsageDescription" target="*-Info.plist">
-            <string>Camera Access Warning</string>
-        </config-file>
+
     </platform>
     <engine name="android" spec="~6.0.0" />
     <engine name="ios" spec="~4.3.0" />
