@@ -1,0 +1,16 @@
+!SESSION 2017-01-16 22:37:27.391 -----------------------------------------------
+eclipse.buildId=R3.7.1.201612151837
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -eclipse.keyring @user.home/.xmind/secure_storage_linux
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data ../workspace -eclipse.keyring @user.home/.xmind/secure_storage_linux
+
+!ENTRY org.xmind.cathy 1 0 2017-01-16 22:37:47.742
+!MESSAGE Skip unrecognized command line argument: '-eclipse.keyring'
+
+!ENTRY org.xmind.cathy 1 0 2017-01-16 22:37:47.743
+!MESSAGE Skip unrecognized command line argument: '@user.home/.xmind/secure_storage_linux'
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-01-16 22:37:58.244
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.xmind.ui.sharing/org.xmind.ui.internal.sharing.SharingServiceStatusToolControl

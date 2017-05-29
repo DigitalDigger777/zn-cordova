@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+repositories/file\:_var_www_jerry_zan-cordova_tmp_.eclipseextension/description=
+repositories/file\:_var_www_jerry_zan-cordova_tmp_.eclipseextension/enabled=true
+repositories/file\:_var_www_jerry_zan-cordova_tmp_.eclipseextension/isSystem=true
+repositories/file\:_var_www_jerry_zan-cordova_tmp_.eclipseextension/name=/var/www/jerry/zan-cordova/tmp/.eclipseextension
+repositories/file\:_var_www_jerry_zan-cordova_tmp_.eclipseextension/provider=
+repositories/file\:_var_www_jerry_zan-cordova_tmp_.eclipseextension/type=org.eclipse.equinox.p2.extensionlocation.metadataRepository
+repositories/file\:_var_www_jerry_zan-cordova_tmp_.eclipseextension/uri=file\:/var/www/jerry/zan-cordova/tmp/.eclipseextension
+repositories/file\:_var_www_jerry_zan-cordova_tmp_.eclipseextension/version=1
+repositories/file\:_var_www_jerry_zan-cordova_tmp_XMind_amd64_configuration_org.eclipse.osgi_715_data_listener_1925729951/description=
+repositories/file\:_var_www_jerry_zan-cordova_tmp_XMind_amd64_configuration_org.eclipse.osgi_715_data_listener_1925729951/isSystem=true
+repositories/file\:_var_www_jerry_zan-cordova_tmp_XMind_amd64_configuration_org.eclipse.osgi_715_data_listener_1925729951/name=dropins
+repositories/file\:_var_www_jerry_zan-cordova_tmp_XMind_amd64_configuration_org.eclipse.osgi_715_data_listener_1925729951/provider=
+repositories/file\:_var_www_jerry_zan-cordova_tmp_XMind_amd64_configuration_org.eclipse.osgi_715_data_listener_1925729951/type=org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository
+repositories/file\:_var_www_jerry_zan-cordova_tmp_XMind_amd64_configuration_org.eclipse.osgi_715_data_listener_1925729951/uri=file\:/var/www/jerry/zan-cordova/tmp/XMind_amd64/configuration/org.eclipse.osgi/715/data/listener_1925729951/
+repositories/file\:_var_www_jerry_zan-cordova_tmp_XMind_amd64_configuration_org.eclipse.osgi_715_data_listener_1925729951/version=1

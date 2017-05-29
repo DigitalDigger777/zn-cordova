@@ -8,8 +8,9 @@ define([
     'view/user/LoginHelpView',
     'view/user/ChangePassView',
     'view/user/MyQrView',
-    'model/CurrentUserModel'
-], function(ProfileView, LoginView, LoginHelpView, ChangePassView, MyQrView, CurrentUserModel){
+    'model/CurrentUserModel',
+    'view/user/LoginWeChatView',
+], function(ProfileView, LoginView, LoginHelpView, ChangePassView, MyQrView, CurrentUserModel, LoginWeChatView){
     return {
         showProfile: function(){
             console.log('show profile');
@@ -73,6 +74,29 @@ define([
             console.log('login');
             var loginView = new LoginView();
             loginView.render();
+        },
+        loginWeChat: function(){
+            console.log('login');
+
+            $.ajax({
+                url: 'http://coupon-backend.ppcgclub.com/wechat/build-get-code-url',
+                dataType: 'json',
+                success: function(data){
+                    console.log(data);
+                    var WeChatLoginModel = Backbone.Model.extend();
+
+                    var loginWeChatView = new LoginWeChatView({
+                        model: new WeChatLoginModel({
+                            url: data.url
+                        })
+                    });
+                    loginWeChatView.render();
+                },
+                error: function(error){
+                    console.log(error);
+                }
+            });
+
         },
         loginHelp: function(){
             console.log('show login help form');

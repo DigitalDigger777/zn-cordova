@@ -11,7 +11,8 @@ define(['marionette', 'controller/ProfileController'], function(Marionette, Prof
             'change-password': 'changePass',
             'my-qr-code': 'myQrCode',
             'login': 'login',
-            'login-help': 'loginHelp'
+            'login-help': 'loginHelp',
+            'login-wechat': 'loginWeChat'
         }
     });
 

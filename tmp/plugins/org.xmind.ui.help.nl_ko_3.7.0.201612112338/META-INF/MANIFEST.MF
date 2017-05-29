@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.xmind.ui.help.nl_ko;singleton:=true
+Bundle-Name: XMind Help Korean Language Support
+Bundle-Version: 3.7.0.201612112338
+Archiver-Version: Plexus Archiver
+Built-By: so
+Bundle-ManifestVersion: 2
+Bundle-Vendor: XMind Ltd.
+Fragment-Host: org.xmind.ui.help
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_92
+Eclipse-BundleShape: dir
+
+Name: about.html
+SHA-256-Digest: zIP/do0RthmafXjThr5FKRgwokiG8oPXBVIhy6B3atk=
+
+Name: META-INF/maven/org.xmind.help.plugins/org.xmind.ui.help.nl_ko/po
+ m.properties
+SHA-256-Digest: 7oV3eaeMFdMPjLMnZ7x44DUg/TdDHgTsPmXIXuZ+U2c=
+
+Name: META-INF/maven/org.xmind.help.plugins/org.xmind.ui.help.nl_ko/po
+ m.xml
+SHA-256-Digest: tqcMgNlryt40B/+J9AjRIxnDC6rMmLAR0hAKSLulPzU=
+
+Name: plugin_ko.properties
+SHA-256-Digest: tRJNjN4GOyeRqPaSNAWBR8TKucEJabQEiUwCxxATHrg=
+

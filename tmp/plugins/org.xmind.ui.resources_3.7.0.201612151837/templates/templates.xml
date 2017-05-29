@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<templates>
+	<category name="%category.business.name">
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/Annual Report.xmt" name="Annual Report" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/Balance Sheet.xmt" name="Balance Sheet" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/Business Plan.xmt" name="Business Plan" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/Business Timeline.xmt" name="Business Timeline" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/Cause and Effect.xmt" name="Cause and Effect" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/Company Hierarchy.xmt" name="Company Hierarchy" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/Manufactory Flow.xmt" name="Manufactory Flow" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/Meeting Management.xmt" name="Meeting Management" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/Problem Solving.xmt" name="Problem Solving" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/Projects Dashboard.xmt" name="Projects Dashboard" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/Sales Management.xmt" name="Sales Management" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/SWOT Analysis.xmt" name="SWOT Analysis" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/business/XMind 10 Years.xmt" name="XMind 10 Years" />
+	</category>
+	
+	<category name="%category.education.name">
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/education/Book Report.xmt" name="Book Report" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/education/Class Schedule.xmt" name="Class Schedule" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/education/Compare and Contrast.xmt" name="Compare and Contrast" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/education/Exam Review Plan.xmt" name="Exam Review Plan" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/education/Example of Workflow.xmt" name="Example of Workflow" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/education/Paper Outline.xmt" name="Paper Outline" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/education/Syllabus.xmt" name="Syllabus" />
+	</category>
+	
+	<category name="%category.personal.name">
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/personal/Diet Plan.xmt" name="Diet Plan" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/personal/Party Preparation.xmt" name="Party Preparation" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/personal/Resume (CV).xmt" name="Resume (CV)" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/personal/Shopping List.xmt" name="Shopping List" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/personal/Travel Plan.xmt" name="Travel Plan" />
+		<template resource="platform:/plugin/org.xmind.ui/$nl$/templates/personal/Weekly Plan.xmt" name="Weekly Plan" />
+	</category>
+</templates>

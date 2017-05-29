@@ -52,7 +52,7 @@ define([
                 mobileMenu.render();
             } else {
                 //Backbone.history.navigate('#login', true);
-                window.location.hash = '#login'
+                window.location.hash = '#login-wechat'
             }
 
 
